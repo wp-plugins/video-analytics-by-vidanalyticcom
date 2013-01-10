@@ -26,13 +26,10 @@ plugin can do. All of the features are enabled natively.
 
 Features
 
-* Automatic tracking of all embeds without having to make changes to your
-* templates
-* Supports tracking for single domain, multiple top-level domains, and
-* subdomains.
+* Automatic tracking of all embeds without having to make changes to your templates
+* Supports tracking for single domain, multiple top-level domains, and subdomains.
 * Ability to create channels to track multiple sites
-* Ability to create an single use embed for tracking on and off the Wordpress
-* site.
+* Ability to create an single use embed for tracking on and off the Wordpress site.
 * Content Discovery tool
 
 Tracks the following:
