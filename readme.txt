@@ -4,7 +4,7 @@ Donate link: vidanalytic.com
 Tags: chart, dashboard, google, google analytics, graph, statistics, stats, tracking, omniture, video embed, video usage, video analytics, youtube, video views
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: trunk
+Stable tag: 0.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -79,7 +79,7 @@ Coming soon.
 
 == Changelog ==
 
-0.8 - 2012/2/28 - Alpha Release
+0.8 - 2012/12/28 - Alpha Release
 
 == Upgrade notice ==
 
