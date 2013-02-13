@@ -69,8 +69,6 @@ href="http://forum.vidanalytic.com/">http://forum.vidanalytic.com/</a>
 
 == Frequently asked questions ==
 
-What do you track?
-
 Coming soon.
 
 == Screenshots ==
