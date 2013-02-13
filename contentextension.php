@@ -1,14 +1,14 @@
 <?php
 /**
- * @package Vidanalytic
- * @version 0.1
+ * @package VidAnalytic
+ * @version 0.8.2
  */
 /*T
-Plugin Name: Vidanalytic
-Plugin URI: http://wordpress.org/extend/plugins/vidanalytic
-Description: Vidanalytic is a free companion solution to Google Analytics for tracking embedded video usage on site.
+Plugin Name: VidAnalytic
+Plugin URI: http://wordpress.org/extend/plugins/video-analytics-by-vidanalyticcom/
+Description: VidAnalytic is a free companion solution to Google Analytics for tracking embedded video usage on site.
 Author: vidanalytic
-Version: 0.8
+Version: 0.8.2
 Author URI: http://www.vidanalytic.com/
 */
 
@@ -28,25 +28,43 @@ function cxtn_rewrite_youtube($content) {
   $yt_https_embedprefix_length = strlen($yt_https_embedprefix);
   
 
-  $dom=new domDocument;
-  $dom->loadHTML($content);
+  $dom=new domDocument();
+  @$dom->loadHTML('<?xml encoding="' . DB_CHARSET . '"?>' . $content);
   
   /* Find and replace all IFRAME embeds with Content Extension embeds */
   $xpath = new DOMXpath($dom);
   $result = $xpath->query("//iframe");
   foreach ($result as $iframeNode) {
+    $iframeAutoplay = FALSE;
     $iframeURL = $iframeNode->getAttribute("src");
+    $iframeQuery = parse_url($iframeURL, PHP_URL_QUERY);
+    if (is_string($iframeQuery)) {
+        $queryParts = array();
+        parse_str($iframeQuery, $queryParts);
+        if (isset($queryParts['autoplay'])) {
+            if ($queryParts['autoplay'] == TRUE) {
+                $iframeAutoplay = TRUE;
+            }
+        }
+    }
 
     if (strncmp($iframeURL, $yt_http_embedprefix, $yt_http_embedprefix_length) === 0)
     {
       $yt_video_id = substr($iframeURL, $yt_http_embedprefix_length, 11);
       $srcURL = sprintf("http://player.cxtn.net/player/embed/youtube/%s?channelid=".$mChannelID, $yt_video_id );
+      if ($iframeAutoplay == TRUE) {
+          $srcURL .= "&autoplay=1";
+      }
       $iframeNode->setAttribute("src", $srcURL);
     }
+
     if (strncmp($iframeURL, $yt_https_embedprefix, $yt_https_embedprefix_length) === 0)
     {
-      $yt_video_id = substr($iframeURL, $yt_http_embedprefix_length, 11);
-      $srcURL = sprintf("https://player.cxtn.net/player/embed/youtube/%s?channelid=".$mChannelID, $yt_video_id );
+      $yt_video_id = substr($iframeURL, $yt_https_embedprefix_length, 11);
+      $srcURL = sprintf("http://player.cxtn.net/player/embed/youtube/%s?channelid=".$mChannelID, $yt_video_id );
+      if ($iframeAutoplay == TRUE) {
+          $srcURL .= "&autoplay=1";
+      }
       $iframeNode->setAttribute("src", $srcURL);
     }
 
@@ -80,7 +98,7 @@ function cxtn_add_loader() {
 add_action('wp_enqueue_scripts', 'cxtn_add_loader');
 
 function cxtn_plugin_menu() {
-	add_options_page( 'My Plugin Options', 'My Plugin', 'manage_options', 'my-unique-identifier2', 'cxtn_plugin_options' );
+	add_options_page( 'VidAnalytic Plugin Options', 'VidAnalytic', 'manage_options', 'vidanalytic-plugin-options', 'cxtn_plugin_options' );
 
 }
 add_action( 'admin_menu', 'cxtn_plugin_menu' );
