@@ -4,7 +4,7 @@ Donate link: vidanalytic.com
 Tags: chart, dashboard, google, google analytics, graph, statistics, stats, tracking, omniture, video embed, video usage, video analytics, youtube, video views
 Requires at least: 3.3
 Tested up to: 3.5
-Stable tag: trunk
+Stable tag: 0.8.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,7 +58,7 @@ Upload the VidAnalytic plugin to your blog, Activate it, then enter your
 VidAnalytic.com channel id.
 
 If you don't have a VidAnalytic.com channel id, get one at <a
-href="http://www.vidanalytic.com/">VidAnalytic.com</a>
+href="http://app.vidanalytic.com/register/">app.vidanalytic.com/register</a>
 
 That's all!
 
