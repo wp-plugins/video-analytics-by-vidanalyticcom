@@ -37,7 +37,7 @@
             {
                 $aMsg = array('msg_type' => 'error', 'sMsg' => 'The Channel ID you have entered is either invalid or inactive.');
             }
-        }    
+        }
     }
 ?>
 <div class="wrap">
@@ -49,7 +49,7 @@
             <div class="<?php echo $aMsg['msg_type']; ?>" id="message">
                 <p><strong><?php echo $aMsg['sMsg']; ?></strong></p>
             </div>
-        <?php    
+        <?php
         }
         ?>
 
@@ -61,7 +61,7 @@
 <p>
 <a href="http://vidanalytic.com" target="_blank">VidAnalytic</a> is currently compatible with embedded YouTube videos.
 </p>
-        <p>To find out more, check out or website at  <a href="http://www.vidanalytic.com" target="_blank">vidanalytic.com</a><p>
+        <p>To find out more, check out or website at  <a href="http://www.vidanalytic.com" target="_blank">VidAnalytic.com</a><p>
             <!--<div class="form-field form-required">
                 <label for="cxtn_channel_url">Channel URL</label>
                 <input type="text" name="cxtn_channel_url" id="cxtn_channel_url" value="<?php echo get_option('cxtn_channel_url'); ?>" size="90" />
@@ -69,20 +69,21 @@
             </div>-->
 
         <h3>Channel ID</h3>
-<p style="padding: .5em; background-color: #aa0; color: #fff; font-weight: bold;">Please enter your Channel ID. (<a href="http://app.vidanalytic.com/register?return=true" style="color:#fff" target="_blank">Get your Channel ID.</a>)</p>
+<p style="padding: 1em; background-color: #aa0; color: #fff; font-weight: bold;">Please enter your Channel ID.</p>
+<p><h4>Don't have a Channel ID? <a href="http://app.vidanalytic.com/register?return=true" style="" target="_blank">Get Your Free Account and Channel ID at VidAnalytic.com.</a></h4></p>
 
             <div class="form-field">
                 <input type="text" name="cxtn_channel_id" id="cxtn_channel_id" value="<?php echo get_option('cxtn_channel_id'); ?>" />
             </div>
-            
+
             <p class="submit">
                 <input type="submit" name="submit" value="Save Changes" class="button button-primary" />
             </p>
         </form>
         <div class="validate" style="margin: auto; width:400px">
             <h3>Control Panel</h3>
-            <p style="padding: .5em; background-color: #4AB915; color: #fff; font-weight:bold;">Access your account</p>
-            <p><a href="http://app.vidanalytic.com/login" target="_blank">Click Here</a> to access your account</p>
+            <p style="padding: .5em; background-color: #4AB915; color: #fff; font-weight:bold;"><a style="padding: .5em; background-color: #4AB915; color: #fff; font-weight:bold;" href="http://app.vidanalytic.com/"  target="_blank">Access Your Account</a></p>
+            <p><a href="http://app.vidanalytic.com/" target="_blank">Click Here</a> to access your <a href="http://www.vidanalytic.com" target="_blank">VidAnalytic</a> account</p>
 
         </div>
     </div>

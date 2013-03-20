@@ -3,8 +3,8 @@ Contributors: vidanalytic
 Donate link: vidanalytic.com
 Tags: chart, dashboard, google, google analytics, graph, statistics, stats, tracking, omniture, video embed, video usage, video analytics, youtube, video views
 Requires at least: 3.3
-Tested up to: 3.5
-Stable tag: trunk
+Tested up to: 3.5.1
+Stable tag: 0.9.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -58,16 +58,18 @@ Upload the VidAnalytic plugin to your blog, Activate it, then enter your
 VidAnalytic.com channel id.
 
 If you don't have a VidAnalytic.com channel id, get one at <a
-href="http://app.vidanalytic.com/register/">app.vidanalytic.com/register</a>
+href="http://app.vidanalytic.com/register/">VidAnalytic.com</a>
 
 That's all!
 
 == Support ==
 
 Please direct support questions to <a
-href="http://forum.vidanalytic.com/">http://forum.vidanalytic.com/</a>
+href="http://support.vidanalytic.com/">http://support.vidanalytic.com/</a>
 
 == Frequently asked questions ==
+
+What do you track?
 
 Coming soon.
 
@@ -93,6 +95,9 @@ Coming soon.
 * Cleanup plugin options page.
 * Add autoplay support.
 * Fix https rewrite.
+
+= 0.9.0 =
+* Page load speed optimizations
 
 == Upgrade notice ==
 
