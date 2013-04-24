@@ -1,14 +1,14 @@
 <?php
 /**
  * @package VidAnalytic
- * @version 0.9.0
+ * @version 0.9.1
  */
 /*T
 Plugin Name: VidAnalytic
 Plugin URI: http://wordpress.org/extend/plugins/video-analytics-by-vidanalyticcom/
 Description: VidAnalytic is a free companion solution to Google Analytics for tracking embedded video usage on site.
 Author: vidanalytic
-Version: 0.9.0
+Version: 0.9.1
 Author URI: http://www.vidanalytic.com/
 */
 

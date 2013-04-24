@@ -61,7 +61,7 @@
 <p>
 <a href="http://vidanalytic.com" target="_blank">VidAnalytic</a> is currently compatible with embedded YouTube videos.
 </p>
-        <p>To find out more, check out or website at  <a href="http://www.vidanalytic.com" target="_blank">VidAnalytic.com</a><p>
+        <p>To find out more, check out our website at  <a href="http://www.vidanalytic.com" target="_blank">VidAnalytic.com</a><p>
             <!--<div class="form-field form-required">
                 <label for="cxtn_channel_url">Channel URL</label>
                 <input type="text" name="cxtn_channel_url" id="cxtn_channel_url" value="<?php echo get_option('cxtn_channel_url'); ?>" size="90" />

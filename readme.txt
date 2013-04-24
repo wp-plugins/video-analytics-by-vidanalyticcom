@@ -4,7 +4,7 @@ Donate link: vidanalytic.com
 Tags: chart, dashboard, google, google analytics, graph, statistics, stats, tracking, omniture, video embed, video usage, video analytics, youtube, video views
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: 0.9.0
+Stable tag: 0.9.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,23 +14,23 @@ embedded video usage on site.
 == Description ==
 
 The VidAnalytic Plugin is a companion analytics suite that provides bloggers
-with live tracking,  insightful data and analysis of what videos are truly
+with live tracking,  insightful data, and analysis of what videos are truly
 consumed on their sites.    It not only allows you to track all your embedded
 videos to all the pages on your site without making any changes to your
-template, but it also provides you with an Admin Dashboard login with access
-to Analytic Stats. The dashboard also allows for deeper analysis of metadata
-derived from all your user engagement.
+template, but it also provides you with an admin dashboard login with access
+to detailed video statistics. The dashboard also allows for deeper analysis of
+metadata derived from all your user engagement.
 
 Read through the list of all the features below to get a feeling of what this
 plugin can do. All of the features are enabled natively.
 
 = Features =
 
-* Automatic tracking of all embeds without having to make changes to your templates
+* Automatic tracking of all embeds without having to make changes to your templates.
 * Supports tracking for single domain, multiple top-level domains, and subdomains.
-* Ability to create channels to track multiple sites
+* Ability to create channels to track multiple sites.
 * Ability to create an single use embed for tracking on and off the Wordpress site.
-* Content Discovery tool
+* Content Discovery tool.
 
 = Tracks the following =
 
@@ -50,7 +50,7 @@ YouTube also matches your user’s interests. Program them using our quick
 embed tool or just grab the youtube link off of the Youtube site.
 
 Perfect complementary analytics platform for Google Analytics, Omniture,
-Urchin or any other web site analytics platform.
+Urchin or any other website analytics platform.
 
 == Installation ==
 
@@ -68,8 +68,6 @@ Please direct support questions to <a
 href="http://support.vidanalytic.com/">http://support.vidanalytic.com/</a>
 
 == Frequently asked questions ==
-
-What do you track?
 
 Coming soon.
 
@@ -98,6 +96,9 @@ Coming soon.
 
 = 0.9.0 =
 * Page load speed optimizations
+
+= 0.9.1 =
+* Fix some spelling
 
 == Upgrade notice ==
 
