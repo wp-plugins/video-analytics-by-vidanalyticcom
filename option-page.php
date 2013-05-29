@@ -59,7 +59,7 @@
 </p>
 
 <p>
-<a href="http://vidanalytic.com" target="_blank">VidAnalytic</a> is currently compatible with embedded YouTube videos.
+<a href="http://vidanalytic.com" target="_blank">VidAnalytic</a> is currently compatible with embedded YouTube, Vimeo, and Dailymotion videos.
 </p>
         <p>To find out more, check out our website at  <a href="http://www.vidanalytic.com" target="_blank">VidAnalytic.com</a><p>
             <!--<div class="form-field form-required">
