@@ -4,7 +4,7 @@ Donate link: vidanalytic.com
 Tags: chart, dashboard, google, google analytics, graph, word cloud, statistics, stats, tracking, omniture, video embed, video usage, video analytics, youtube, video views, vimeo, dailymotion
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: 0.9.8
+Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
