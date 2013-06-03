@@ -1,7 +1,7 @@
-=== VidAnalytic ===
+=== YouTube, Vimeo, and Dailymotion Advanced Embed Analytics - VidAnalytic ===
 Contributors: vidanalytic
 Donate link: vidanalytic.com
-Tags: chart, dashboard, google, google analytics, graph, word cloud, statistics, stats, tracking, omniture, video embed, video usage, video analytics, youtube, video views, vimeo, dailymotion
+Tags: chart, dashboard, google, google analytics, analytics, graph, word cloud, wordcloud, statistics, stats, tracking, omniture, embed, video, youtube, vimeo, dailymotion, video embed, youtube embed, vimeo embed, dailymotion embed, youtube embedding, vimeo embedding, dailymotion embedding, video usage, youtube usage, vimeo usage, dailymotion usage, video analytics, youtube analytics, vimeo analytics, dailymotion analytics, video views, youtube views, vimeo views, dailymotion views, advanced video, advanced youtube, advanced vimeo, advanced dailymotion, youtube plugin, embed video, embed youtube, embed vimeo, embed dailymotion, entertainment, real-time analytics, realtime analytics, real time analytics, wordpress video embed, wordpress youtube embed, wordpress dailymotion embed, wordpress vimeo embed, web videos, object, iframe, manage, manage youtube, manage vimeo, manage dailymotion, media, embedding, embedding youtube, facebook, video plugin
 Requires at least: 3.3
 Tested up to: 3.5.1
 Stable tag: 0.9.8
@@ -15,9 +15,11 @@ embedded video usage on site for YouTube, Vimeo, and Dailymotion.
 
 The VidAnalytic Plugin is a companion analytics suite that provides bloggers
 with live tracking,  insightful data, and analysis of what videos are truly
-consumed on their sites.    It not only allows you to track all your embedded
-videos to all the pages on your site without making any changes to your
-template, but it also provides you with an admin dashboard login with access
+consumed on their sites. It allows you to track all your embedded
+videos on all your sites' pages without making any changes to any
+templates or the need for special shortcodes.
+
+VidAnalytic also provides an admin dashboard login with access
 to detailed video statistics. The dashboard also allows for deeper analysis of
 metadata derived from all your user engagement.
 
@@ -28,22 +30,20 @@ plugin can do. All of the features are enabled natively.
 
 * Automatic tracking of all embeds without having to make changes to your templates.
 * Supports tracking for single domain, multiple top-level domains, and subdomains.
-* Ability to create channels to track multiple sites.
-* Ability to create an single use embed for tracking on and off the Wordpress site.
+* Create channels to track multiple sites.
 * Content Discovery tool.
 
 = Tracks the following =
 
-* Video Performance trending
-* Video Play Starts
-* Video Play minutes of engagement
-* Video view to 50% completion
-* Video Play Completes
+* Video trends
+* Play Starts
+* Minutes of engagement
+* Video progress and completion rates
 * Aggregate Video Playtime
-* Video view analysis by Geo/Country/City
-* Video view analysis by browser, OS
-* Video views by embedding domain
-* Video Views by embedding URL
+* Geographic views
+* Browser, Operating system
+* Embedding domain
+* Embedding URL
 
 Take metadata analysis from VidAnalytic and dive into what other videos on
 YouTube also matches your user’s interests. Program them using our quick
