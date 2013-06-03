@@ -13,21 +13,15 @@ embedded video usage on site for YouTube, Vimeo, and Dailymotion.
 
 == Description ==
 
-The VidAnalytic Plugin is a companion analytics suite that provides bloggers
-with live tracking,  insightful data, and analysis of what videos are truly
-consumed on their sites. It allows you to track all your embedded
-videos on all your sites' pages without making any changes to any
-templates or the need for special shortcodes.
+The VidAnalytic Plugin is a video analytics suite that provides bloggers with live tracking,  insightful data, and analysis of what videos are truly consumed on their sites. It allows you to track all your embedded videos on all your sites' pages without making any changes to any templates or the need for special shortcodes.
 
-VidAnalytic also provides an admin dashboard login with access
-to detailed video statistics. The dashboard also allows for deeper analysis of
-metadata derived from all your user engagement.
+VidAnalytic also provides an admin dashboard login with access to detailed video statistics. The dashboard also allows for deeper analysis of metadata derived from all your user engagement.
 
-Read through the list of all the features below to get a feeling of what this
-plugin can do. All of the features are enabled natively.
+Read through the list of all the features below to get a feeling of what this plugin can do. All of the features are enabled natively.
 
 = Features =
 
+* YouTube Analytics, Vimeo Analytics, and Dailymotion Analytics all in one simple plugin
 * Automatic tracking of all embeds without having to make changes to your templates.
 * Supports tracking for single domain, multiple top-level domains, and subdomains.
 * Create channels to track multiple sites.
@@ -45,17 +39,13 @@ plugin can do. All of the features are enabled natively.
 * Embedding domain
 * Embedding URL
 
-Take metadata analysis from VidAnalytic and dive into what other videos on
-YouTube also matches your user’s interests. Program them using our quick
-embed tool or just grab the youtube link off of the Youtube site.
+Take metadata analysis from VidAnalytic and dive into what other videos on YouTube also matches your user’s interests. Program them using our quick embed tool or just grab the youtube link off of the Youtube site.
 
-Perfect complementary analytics platform for Google Analytics, Omniture,
-Urchin or any other website analytics platform.
+Perfect complementary analytics platform for Google Analytics, Omniture, Urchin or any other website analytics platform.
 
 == Installation ==
 
-Upload the VidAnalytic plugin to your blog, Activate it, then enter your
-VidAnalytic.com channel id.
+Upload the VidAnalytic plugin to your blog, Activate it, then enter your VidAnalytic.com channel id.
 
 If you don't have a VidAnalytic.com channel id, get one at <a
 href="http://app.vidanalytic.com/register/">VidAnalytic.com</a>
@@ -64,8 +54,7 @@ That's all!
 
 == Support ==
 
-Please direct support questions to <a
-href="http://support.vidanalytic.com/">http://support.vidanalytic.com/</a>
+Please direct support questions to <a href="http://support.vidanalytic.com/">http://support.vidanalytic.com/</a>
 
 == Frequently asked questions ==
 
