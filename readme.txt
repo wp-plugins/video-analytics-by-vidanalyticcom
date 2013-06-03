@@ -4,7 +4,7 @@ Donate link: vidanalytic.com
 Tags: chart, dashboard, google, google analytics, analytics, graph, word cloud, wordcloud, statistics, stats, tracking, omniture, embed, video, youtube, vimeo, dailymotion, video embed, youtube embed, vimeo embed, dailymotion embed, youtube embedding, vimeo embedding, dailymotion embedding, video usage, youtube usage, vimeo usage, dailymotion usage, video analytics, youtube analytics, vimeo analytics, dailymotion analytics, video views, youtube views, vimeo views, dailymotion views, advanced video, advanced youtube, advanced vimeo, advanced dailymotion, youtube plugin, embed video, embed youtube, embed vimeo, embed dailymotion, entertainment, real-time analytics, realtime analytics, real time analytics, wordpress video embed, wordpress youtube embed, wordpress dailymotion embed, wordpress vimeo embed, web videos, object, iframe, manage, manage youtube, manage vimeo, manage dailymotion, media, embedding, embedding youtube, facebook, video plugin
 Requires at least: 3.3
 Tested up to: 3.5.1
-Stable tag: trunk
+Stable tag: 0.9.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
