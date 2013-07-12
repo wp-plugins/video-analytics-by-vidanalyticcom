@@ -1,15 +1,14 @@
-=== YouTube, Vimeo, and Dailymotion Advanced Embed Video Analytics - VidAnalytic ===
+=== Video Analytics for YouTube, Vimeo, and Dailymotion Embeds by VidAnalytic ===
 Contributors: vidanalytic
 Donate link: vidanalytic.com
-Tags: chart, dashboard, google, google analytics, analytics, graph, word cloud, wordcloud, statistics, stats, tracking, omniture, embed, video, youtube, vimeo, dailymotion, video embed, youtube embed, vimeo embed, dailymotion embed, youtube embedding, vimeo embedding, dailymotion embedding, video usage, youtube usage, vimeo usage, dailymotion usage, video analytics, youtube analytics, vimeo analytics, dailymotion analytics, video views, youtube views, vimeo views, dailymotion views, advanced video, advanced youtube, advanced vimeo, advanced dailymotion, youtube plugin, embed video, embed youtube, embed vimeo, embed dailymotion, entertainment, real-time analytics, realtime analytics, real time analytics, wordpress video embed, wordpress youtube embed, wordpress dailymotion embed, wordpress vimeo embed, web videos, object, iframe, manage, manage youtube, manage vimeo, manage dailymotion, media, embedding, embedding youtube, facebook, video plugin
-Requires at least: 3.3
-Tested up to: 3.5.1
-Stable tag: trunk
+Tags: chart, dashboard, google, google analytics, analytics, graph, word cloud, wordcloud, statistics, stats, tracking, omniture, embed, video, youtube, vimeo, dailymotion, video embed, youtube embed, vimeo embed, dailymotion embed, youtube embedding, vimeo embedding, dailymotion embedding, video usage, youtube usage, vimeo usage, dailymotion usage, video analytics, youtube analytics, vimeo analytics, dailymotion analytics, video views, youtube views, vimeo views, dailymotion views, advanced video, advanced youtube, advanced vimeo, advanced dailymotion, youtube plugin, embed video, embed youtube, embed vimeo, embed dailymotion, entertainment, real-time analytics, realtime analytics, real time analytics, wordpress video embed, wordpress youtube embed, wordpress dailymotion embed, wordpress vimeo embed, web videos, iframe, manage youtube, manage vimeo, manage dailymotion, media, embedding, embedding youtube, video plugin
+Requires at least: 2.8
+Tested up to: 3.5.2
+Stable tag: 0.9.9.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-VidAnalytic is a free companion solution to Google Analytics for tracking
-embedded video usage on site for YouTube, Vimeo, and Dailymotion.
+VidAnalytic is a free companion solution to Google Analytics for tracking embedded video usage on site for YouTube, Vimeo, and Dailymotion.
 
 == Description ==
 
@@ -22,7 +21,7 @@ Read through the list of all the features below to get a feeling of what this pl
 = Features =
 
 * YouTube Analytics, Vimeo Analytics, and Dailymotion Analytics all in one simple plugin
-* Automatic tracking of all embeds without having to make changes to your templates.
+* Automatic tracking of all embeds without having to make changes to your page templates.
 * Supports tracking for single domain, multiple top-level domains, and subdomains.
 * Create channels to track multiple sites.
 * Content Discovery tool.
@@ -92,7 +91,16 @@ Coming soon.
 = 0.9.8 =
 * Major release - Vimeo, DailyMotion support
 
+= 0.9.9.8 =
+* Granular tracking support for membership style websites
+* Fixed 'invalid channel id' issues for certain hosting configurations
+* Backport testing for Wordpress 2.8
+
 == Upgrade notice ==
 
+= 0.9.8 =
 Add Vimeo, DailyMotion support.
+
+= 0.9.9.8 =
+Granular tracking support and compatibility fix for some restricted web hosting environments.
 
