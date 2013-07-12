@@ -1,14 +1,14 @@
 <?php
 /**
  * @package VidAnalytic
- * @version 0.9.1
+ * @version 0.9.9.8
  */
 /*T
 Plugin Name: VidAnalytic
 Plugin URI: http://wordpress.org/extend/plugins/video-analytics-by-vidanalyticcom/
 Description: VidAnalytic is a free companion solution to Google Analytics for tracking embedded video usage on site.
 Author: vidanalytic
-Version: 0.9.1
+Version: 0.9.9.8
 Author URI: http://www.vidanalytic.com/
 */
 
@@ -21,18 +21,36 @@ if(!get_option('cxtn_channel_id') && $_GET['page'] != 'cxtn_dashboard_menu')
 }
 
 function cxtn_add_loader() {
-  $mChannelID = get_option('cxtn_channel_id');
-  if(!empty($mChannelID))
-  {
+    $mChannelID = get_option('cxtn_channel_id');
+
+    $cxtnmOptions= get_option('cxtn_track_permission');
+    $advpermission= $cxtnmOptions['cxtn_adv_track_opt'];
+    $permission=false;
+    $current_user = wp_get_current_user();
+
+    if ( is_user_logged_in() ) {
+        $roles =$current_user->roles;
+        $role = array_shift($roles);
+        if( $cxtnmOptions['cxtn_adv_track_role_'.$role]==1) $permission = true;
+
+        if($advpermission==1 && $permission==false )
+            $mChannelID= 'default';
+    }
+
+    if(empty($mChannelID))
+    {
+        $mChannelID= 'default';
+    }
+
     $cxtn_loader_path = "http://cdn.cxtn.net/loader/loader.js#channelid=".$mChannelID;
     wp_enqueue_script(
-         "cxtn_loader",
-         $cxtn_loader_path,
-         '',
-         '',
-         true
+        "cxtn_loader",
+        $cxtn_loader_path,
+        '',
+        '',
+        true
     );
-  }  
+
 }
 add_action('wp_enqueue_scripts', 'cxtn_add_loader');
 
@@ -77,5 +95,7 @@ function register_custom_menu_page() {
 add_action('admin_head', 'cxtn_admin_head');
 function cxtn_admin_head() {
   wp_enqueue_script('post');
+    wp_enqueue_script('jquery');
+
 }
 ?>

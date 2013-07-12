@@ -1,3 +1,9 @@
+<style>
+   .radio-class{
+       width:auto !important;
+   }
+
+</style>
 <?php
     if($_POST['submit'])
     {
@@ -10,7 +16,13 @@
         else{
             $sChannelUrl = "http://data.cxtn.net/data/channel/".$mChannelId;
 
-            $sChannelOpt = @file_get_contents($sChannelUrl);
+            $resp = wp_remote_get($sChannelUrl);
+            if ( 200 == $resp['response']['code'] ) {
+                $body = $resp['body'];
+                //var_dump($body);
+            }
+
+            $sChannelOpt = $body;
             //var_dump($sChannelOpt);
 
             $iPosOf = strpos($sChannelOpt, "{");
@@ -30,6 +42,18 @@
                 /* Update database to store valid Channel URL & Channel ID */
                 //update_option('cxtn_channel_url' , $sChannelUrl);
                 update_option('cxtn_channel_id' , $output->_id);
+
+                $default_options= array();
+                global $wp_roles;
+
+                $default_options['cxtn_adv_track_opt'] = $_POST['cxtn_adv_track_opt'];
+
+                foreach ( $wp_roles->role_names as $role => $name ){
+                    $default_options['cxtn_adv_track_role_'.$role] = $_POST['cxtn_adv_track_role_'.$role];
+                }
+                update_option('cxtn_track_permission', $default_options);
+
+
 
                 $aMsg = array('msg_type' => 'updated', 'sMsg' => 'Channel ID validated. You have successfully activated the VidAnalytic Plugin.');
             }
@@ -59,7 +83,7 @@
 </p>
 
 <p>
-<a href="http://vidanalytic.com" target="_blank">VidAnalytic</a> is currently compatible with embedded YouTube videos.
+<a href="http://vidanalytic.com" target="_blank">VidAnalytic</a> is currently compatible with embedded YouTube, Vimeo, and Dailymotion videos.
 </p>
         <p>To find out more, check out our website at  <a href="http://www.vidanalytic.com" target="_blank">VidAnalytic.com</a><p>
             <!--<div class="form-field form-required">
@@ -76,9 +100,63 @@
                 <input type="text" name="cxtn_channel_id" id="cxtn_channel_id" value="<?php echo get_option('cxtn_channel_id'); ?>" />
             </div>
 
+            <!-- Customized section -->
+
+            <div class="form-field">
+                <?php  $cxtnOptions = get_option('cxtn_track_permission');?>
+                <p style="padding: 1em; background-color: #aa0; color: #fff; font-weight: bold;">Detailed Tracking Permissions</p>
+                <em id="cxtn_adv_track_msg" style="color:#FF0000;display:none;">Enter a valid Channel ID to enable detailed tracking permissions.<br /></em>
+                <table width="100%">
+                 <tr>
+                 <td>
+                    Enable Detailed Tracking Permissions :
+                  </td>
+                  <td width="15%">
+                      <input type="radio" class="radio-class" name="cxtn_adv_track_opt" id="cxtn_adv_track_opt1" value="1" <?php if( $cxtnOptions['cxtn_adv_track_opt']==1){echo ' checked';}?>/> Yes
+                  </td>
+                     <td width="15%">
+                         <input type="radio" class="radio-class" name="cxtn_adv_track_opt" id="cxtn_adv_track_opt2" value="0" <?php if( !isset($cxtnOptions['cxtn_adv_track_opt']) ||$cxtnOptions['cxtn_adv_track_opt']==0 ){ echo ' checked';}?>/> No
+                   </td>
+                 </tr>
+                </table>
+            </div>
+
+            <div class="form-field" id="ctn_track_roles" style="display: none;">
+                <table class="form-table" width="100%">
+                <?php
+                global $wp_roles;
+
+                $i=0;
+                foreach ( $wp_roles->role_names as $role => $name ){
+                    $optName = 'cxtn_adv_track_role_'.$role;
+                    ?>
+
+                    <tr>
+                    <td width="50%"><strong><?php echo $name;?></strong></td>
+
+                    <td width="30%">
+                        <input type="radio" class="radio-class" name="<?php echo $optName;?>" id="cxtn_adv_track_role<?php echo $i;?>" value="1" checked="checked" /> Yes
+                    </td>
+                    <td width="30%">
+                        <input type="radio" class="radio-class" name="<?php echo $optName;?>" id="cxtn_adv_track_role<?php echo $i;?>" value="0" <?php if( isset($cxtnOptions[$optName]) && $cxtnOptions[$optName]==0){echo ' checked';}?>/> No
+                    </td>
+                    </tr>
+
+                    <?php
+                    $i++;
+                }
+                ?>
+
+                </table>
+            </div>
+
+            <!-- Customized section ends -->
+
             <p class="submit">
                 <input type="submit" name="submit" value="Save Changes" class="button button-primary" />
             </p>
+
+
         </form>
         <div class="validate" style="margin: auto; width:400px">
             <h3>Control Panel</h3>
@@ -88,3 +166,40 @@
         </div>
     </div>
 </div>
+
+<script>
+    var cxtn_custom_display= false;
+    jQuery(document).ready(function(){
+
+        <?php if( $cxtnOptions['cxtn_adv_track_opt']==1){?>
+            cxtn_custom_display= true;
+        <?php }?>
+
+        if(jQuery('#cxtn_channel_id').attr('value')==null || jQuery('#cxtn_channel_id').attr('value')==''){
+            jQuery('input[name="cxtn_adv_track_opt"]').attr('disabled',true);
+            jQuery('#ctn_track_roles').css('display','none');
+            jQuery('#cxtn_adv_track_msg').css('display','block');
+
+        }else if(cxtn_custom_display){
+            jQuery('#ctn_track_roles').css('display','block');
+        }
+
+        jQuery('#cxtn_adv_track_opt1').click(function(){
+
+            if( jQuery(this).is(':checked') ){
+                jQuery('#ctn_track_roles').css('display','block');
+            }
+        })
+
+        jQuery('#cxtn_adv_track_opt2').click(function(){
+
+            if( jQuery(this).is(':checked') ){
+                jQuery('#ctn_track_roles').css('display','none');
+            }
+        })
+
+
+    })
+
+
+</script>
