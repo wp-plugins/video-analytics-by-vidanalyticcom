@@ -1,10 +1,10 @@
 === Video Analytics for YouTube, Vimeo, and Dailymotion Embeds by VidAnalytic ===
 Contributors: vidanalytic
 Donate link: vidanalytic.com
-Tags: chart, dashboard, google, google analytics, analytics, graph, word cloud, wordcloud, statistics, stats, tracking, omniture, embed, video, youtube, vimeo, dailymotion, video embed, youtube embed, vimeo embed, dailymotion embed, youtube embedding, vimeo embedding, dailymotion embedding, video usage, youtube usage, vimeo usage, dailymotion usage, video analytics, youtube analytics, vimeo analytics, dailymotion analytics, video views, youtube views, vimeo views, dailymotion views, advanced video, advanced youtube, advanced vimeo, advanced dailymotion, youtube plugin, embed video, embed youtube, embed vimeo, embed dailymotion, entertainment, real-time analytics, realtime analytics, real time analytics, wordpress video embed, wordpress youtube embed, wordpress dailymotion embed, wordpress vimeo embed, web videos, iframe, manage youtube, manage vimeo, manage dailymotion, media, embedding, embedding youtube, video plugin
+Tags: chart, dashboard, google, google analytics, analytics, graph, word cloud, wordcloud, statistics, stats, tracking, omniture, embed, video, youtube, vimeo, dailymotion, video embed, youtube embed, vimeo embed, dailymotion embed, youtube embedding, vimeo embedding, dailymotion embedding, video usage, youtube usage, vimeo usage, dailymotion usage, video analytics, youtube analytics, vimeo analytics, dailymotion analytics, video views, youtube views, vimeo views, dailymotion views, advanced video, advanced youtube, advanced vimeo, advanced dailymotion, youtube plugin, embed video, embed youtube, embed vimeo, embed dailymotion, entertainment, real-time analytics, realtime analytics, real time analytics, wordpress video embed, wordpress youtube embed, wordpress dailymotion embed, wordpress vimeo embed, web videos, iframe, manage youtube, manage vimeo, manage dailymotion, media, embedding, embedding youtube, video plugin, s2member
 Requires at least: 2.8
-Tested up to: 3.5.2
-Stable tag: 0.9.9.8
+Tested up to: 4.0
+Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -71,36 +71,42 @@ Coming soon.
 
 == Changelog ==
 
-= 0.8 =
-* Alpha Release
-
-= 0.8.1 = 
-* Character encoding patch
-
-= 0.8.2 =
-* Cleanup plugin options page.
-* Add autoplay support.
-* Fix https rewrite.
-
-= 0.9.0 =
-* Page load speed optimizations
-
-= 0.9.1 =
-* Fix some spelling
-
-= 0.9.8 =
-* Major release - Vimeo, DailyMotion support
+= 1.0.0 =
+* Performance improvements
 
 = 0.9.9.8 =
 * Granular tracking support for membership style websites
 * Fixed 'invalid channel id' issues for certain hosting configurations
 * Backport testing for Wordpress 2.8
 
+= 0.9.8 =
+* Major release - Vimeo, DailyMotion support
+
+= 0.9.1 =
+* Fix some spelling
+
+= 0.9.0 =
+* Page load speed optimizations
+
+= 0.8.2 =
+* Cleanup plugin options page.
+* Add autoplay support.
+* Fix https rewrite.
+
+= 0.8.1 = 
+* Character encoding patch
+
+= 0.8 =
+* Alpha Release
+
 == Upgrade notice ==
 
-= 0.9.8 =
-Add Vimeo, DailyMotion support.
+= 1.0.0 =
+Performance improvements
 
 = 0.9.9.8 =
 Granular tracking support and compatibility fix for some restricted web hosting environments.
+
+= 0.9.8 =
+Add Vimeo, DailyMotion support.
 
