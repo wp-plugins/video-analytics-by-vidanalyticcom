@@ -1,14 +1,14 @@
 <?php
 /**
  * @package VidAnalytic
- * @version 0.9.1
+ * @version 1.0.0
  */
 /*T
 Plugin Name: VidAnalytic
 Plugin URI: http://wordpress.org/extend/plugins/video-analytics-by-vidanalyticcom/
 Description: VidAnalytic is a free companion solution to Google Analytics for tracking embedded video usage on site.
 Author: vidanalytic
-Version: 0.9.1
+Version: 1.0.0
 Author URI: http://www.vidanalytic.com/
 */
 
@@ -20,24 +20,44 @@ if(!get_option('cxtn_channel_id') && $_GET['page'] != 'cxtn_dashboard_menu')
   }
 }
 
-function cxtn_add_loader() {
-  $mChannelID = get_option('cxtn_channel_id');
-  if(!empty($mChannelID))
-  {
-    $cxtn_loader_path = "http://cdn.cxtn.net/loader/loader.js#channelid=".$mChannelID;
-    wp_enqueue_script(
-         "cxtn_loader",
-         $cxtn_loader_path,
-         '',
-         '',
-         true
-    );
-  }  
+function cxtn_add_loader_v2() {
+    $plugin_version = '1.0.0';
+    $mChannelID = get_option('cxtn_channel_id');
+
+    $cxtnmOptions= get_option('cxtn_track_permission');
+    $advpermission= $cxtnmOptions['cxtn_adv_track_opt'];
+    $permission=false;
+    $current_user = wp_get_current_user();
+
+    if ( is_user_logged_in() ) {
+        $roles =$current_user->roles;
+        $role = array_shift($roles);
+        if( $cxtnmOptions['cxtn_adv_track_role_'.$role]==1) $permission = true;
+
+        if($advpermission==1 && $permission==false )
+            $mChannelID= 'default';
+    }
+
+    if(empty($mChannelID))
+    {
+        $mChannelID= 'default';
+    }
+
+
+    echo '<script>
+        (function() {
+        var channelid = \''.$mChannelID.'\';
+        var cx = document.createElement(\'script\'); cx.type = \'text/javascript\'; cx.async = true;
+        cx.src = "http://cdn.cxtn.net/loader/loader.js?piver='.$plugin_version.'&ver=wp'.get_bloginfo('version').'#channelid=" + channelid;
+        var s = document.getElementsByTagName(\'script\')[0]; s.parentNode.insertBefore(cx, s);
+      })();
+    </script>';
+
 }
-add_action('wp_enqueue_scripts', 'cxtn_add_loader');
+add_action( 'wp_head', 'cxtn_add_loader_v2' );
 
 function cxtn_plugin_menu() {
-	add_options_page( 'VidAnalytic Plugin Options', 'VidAnalytic', 'manage_options', 'vidanalytic-plugin-options', 'cxtn_plugin_options' );
+        add_options_page( 'VidAnalytic Plugin Options', 'VidAnalytic', 'manage_options', 'vidanalytic-plugin-options', 'cxtn_plugin_options' );
 
 }
 add_action( 'admin_menu', 'cxtn_plugin_menu' );
@@ -50,7 +70,7 @@ register_deactivation_hook( __FILE__, 'cxtn_plugin_remove' );
 
 function cxtn_plugin_install() {
 /* Create a new database field */
-	/*  add_option("cxtn_channel_id", '', 'deprecated', 'yes'); */
+        /*  add_option("cxtn_channel_id", '', 'deprecated', 'yes'); */
 }
 
 function cxtn_plugin_remove() {
@@ -59,11 +79,11 @@ function cxtn_plugin_remove() {
 }
 
 function cxtn_plugin_options() {
-	if ( !current_user_can( 'manage_options' ) )  {
-		wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
-	}
+    if ( !current_user_can( 'manage_options' ) )  {
+        wp_die( __( 'You do not have sufficient permissions to access this page.' ) );
+    }
 
-  include_once('option-page.php');
+    include_once('option-page.php');
 }
 
 add_action('admin_menu', 'register_custom_menu_page');
@@ -76,6 +96,8 @@ function register_custom_menu_page() {
 # Need for applying Wordpress Default validation
 add_action('admin_head', 'cxtn_admin_head');
 function cxtn_admin_head() {
-  wp_enqueue_script('post');
+    wp_enqueue_script('post');
+    wp_enqueue_script('jquery');
+
 }
 ?>
